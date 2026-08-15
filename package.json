@@ -1,5 +1,5 @@
 {
-  "name": "iobroker.energiefluss-erweitert",
+  "name": "iobroker.energiefluss-erweitert-ng",
   "version": "0.8.2",
   "description": "This ioBroker adapter is the next Version of the energiefluss with the attribute 'erweitert' and allows to display an energyflow animation inside an iframe or HTML DIV.",
   "author": {
@@ -11,7 +11,7 @@
       "name": "SKB"
     }
   ],
-  "homepage": "https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert",
+  "homepage": "https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng",
   "license": "MIT",
   "keywords": [
     "ioBroker",
@@ -19,14 +19,14 @@
     "energy-flow",
     "energie",
     "energiefluss",
-    "energiefluss-erweitert",
+    "energiefluss-erweitert-ng",
     "photovoltaics",
     "Photovoltaik",
     "Solar"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert.git"
+    "url": "https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng.git"
   },
   "engines": {
     "node": ">= 20"
@@ -74,7 +74,7 @@
     "minify:functions": "terser private/functions.js --compress --mangle --output www/js/functions.min.js"
   },
   "bugs": {
-    "url": "https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert/issues"
+    "url": "https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/issues"
   },
   "readmeFilename": "README.md"
 }

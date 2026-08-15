@@ -39,11 +39,11 @@ let subscribeArray = [];
 
 let systemLang = 'en';
 
-class EnergieflussErweitert extends utils.Adapter {
+class EnergieflussErweitertNg extends utils.Adapter {
     constructor(options) {
         super({
             ...options,
-            name: 'energiefluss-erweitert',
+            name: 'energiefluss-erweitert-ng',
             useFormatDate: true,
         });
         this.on('ready', this.onReady.bind(this));
@@ -2071,8 +2071,8 @@ if (require.main !== module) {
     /**
      * @param options   Options for the module
      */
-    module.exports = options => new EnergieflussErweitert(options);
+    module.exports = options => new EnergieflussErweitertNg(options);
 } else {
     // otherwise start the instance directly
-    new EnergieflussErweitert();
+    new EnergieflussErweitertNg();
 }

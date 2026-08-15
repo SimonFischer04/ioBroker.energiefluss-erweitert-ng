@@ -1,23 +1,33 @@
-![Logo](admin/energiefluss-erweitert.png)
+# ioBroker.energiefluss-erweitert-ng
+
+Fork of https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert with all the fixes and improvements upstream refuses.
+Despite that, this adapter tries to be backwards compatible with configuration from the base adapter so you should be able to just copy-paste your existing configuration into this adapter and it should just work. The fork also tries to include upstream changes regularly. 
+
+## Current extended features:
+- support for running behind reverse proxy (on non / root path like f.e. /web/ioBroker.energiefluss-erweitert-ng)
+
+---
+
+![Logo](admin/energiefluss-erweitert-ng.png)
 
 # ioBroker.energiefluss-erweitert
 
-![Number of Installations](https://iobroker.live/badges/energiefluss-erweitert-installed.svg)
-![Stable](http://iobroker.live/badges/energiefluss-erweitert-stable.svg)
-[![NPM version](https://img.shields.io/npm/v/iobroker.energiefluss-erweitert.svg)](https://www.npmjs.com/package/iobroker.energiefluss-erweitert)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.energiefluss-erweitert.svg)](https://www.npmjs.com/package/iobroker.energiefluss-erweitert)
+![Number of Installations](https://iobroker.live/badges/energiefluss-erweitert-ng-installed.svg)
+![Stable](http://iobroker.live/badges/energiefluss-erweitert-ng-stable.svg)
+[![NPM version](https://img.shields.io/npm/v/iobroker.energiefluss-erweitert-ng.svg)](https://www.npmjs.com/package/iobroker.energiefluss-erweitert-ng)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.energiefluss-erweitert-ng.svg)](https://www.npmjs.com/package/iobroker.energiefluss-erweitert-ng)
 
-![GitHub](https://img.shields.io/github/license/SKB-CGN/iobroker.energiefluss-erweitert.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/SKB-CGN/iobroker.energiefluss-erweitert?logo=github)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/SKB-CGN/iobroker.energiefluss-erweitert?logo=github)
-![GitHub last commit](https://img.shields.io/github/last-commit/SKB-CGN/iobroker.energiefluss-erweitert?logo=github)
-![GitHub issues](https://img.shields.io/github/issues/SKB-CGN/iobroker.energiefluss-erweitert?logo=github)
+![GitHub](https://img.shields.io/github/license/SimonFischer04/iobroker.energiefluss-erweitert-ng.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/SimonFischer04/iobroker.energiefluss-erweitert-ng?logo=github)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/SimonFischer04/iobroker.energiefluss-erweitert-ng?logo=github)
+![GitHub last commit](https://img.shields.io/github/last-commit/SimonFischer04/iobroker.energiefluss-erweitert-ng?logo=github)
+![GitHub issues](https://img.shields.io/github/issues/SimonFischer04/iobroker.energiefluss-erweitert-ng?logo=github)
 
-[![NPM](https://nodei.co/npm/iobroker.energiefluss-erweitert.png?downloads=true)](https://nodei.co/npm/iobroker.energiefluss-erweitert/)
+[![NPM](https://nodei.co/npm/iobroker.energiefluss-erweitert-ng.png?downloads=true)](https://nodei.co/npm/iobroker.energiefluss-erweitert-ng/)
 
-![Test and Release](https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert/workflows/Test%20and%20Release/badge.svg)
+![Test and Release](https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/workflows/Test%20and%20Release/badge.svg)
 
-## energiefluss-erweitert adapter for ioBroker
+## energiefluss-erweitert-ng adapter for ioBroker
 This adapter provides a dynamic and animated visualization of energy flows for all connected elements in your smart home. It supports sources like photovoltaics, storage systems (batteries), household consumption, grid import/export, electric vehicle charging, and other energy-consuming or generating devices. Each flow is represented with clear bi-directional lines, animation dots and real-time values, allowing you to easily monitor and analyze energy distribution. You can customize icons, colors, and layout, and even use formulas to calculate derived values, giving you a flexible and fully interactive energy management dashboard.
 
 ## Documentation

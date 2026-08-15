@@ -14,7 +14,7 @@ updates:
       timezone: 'Europe/Berlin'
     open-pull-requests-limit: 20
     assignees:
-      - 'SKB-CGN'
+      - 'SimonFischer04'
     versioning-strategy: 'increase'
     ignore:
       - dependency-name: 'sharp'
@@ -31,4 +31,4 @@ updates:
       cronjob: '43 1 9 * *'
     open-pull-requests-limit: 15
     assignees:
-      - 'SKB-CGN'
+      - 'SimonFischer04'

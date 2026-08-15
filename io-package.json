@@ -1,6 +1,6 @@
 {
   "common": {
-    "name": "energiefluss-erweitert",
+    "name": "energiefluss-erweitert-ng",
     "version": "0.8.2",
     "news": {
       "0.8.2": {
@@ -96,17 +96,17 @@
       }
     },
     "titleLang": {
-      "en": "Energiefluss - erweitert",
-      "de": "Energiefluss - erweitert",
-      "ru": "Поток энергии - erweitert",
-      "pt": "Fluxo de energia - erweitert",
-      "nl": "Energiestroom - uitgesteld",
-      "fr": "Flux énergétique - étendu",
-      "it": "Flusso di energia - esteso",
-      "es": "Flujo de energía - ampliado",
-      "pl": "Przepływ energii - rozwinięty",
-      "uk": "Energiefluss - erweitert",
-      "zh-cn": "能量流 - 延伸"
+      "en": "Energiefluss - erweitert NG",
+      "de": "Energiefluss - erweitert NG",
+      "ru": "Поток энергии - erweitert NG",
+      "pt": "Fluxo de energia - erweitert NG",
+      "nl": "Energiestroom - uitgesteld NG",
+      "fr": "Flux énergétique - étendu NG",
+      "it": "Flusso di energia - esteso NG",
+      "es": "Flujo de energía - ampliado NG",
+      "pl": "Przepływ energii - rozwinięty NG",
+      "uk": "Energiefluss - erweitert NG",
+      "zh-cn": "能量流 - 延伸 NG"
     },
     "desc": {
       "en": "This adapter provides a dynamic and animated visualization of energy flows for all connected elements in your smart home. It supports sources like photovoltaics, storage systems (batteries), household consumption, grid import/export, electric vehicle charging, and other energy-consuming or generating devices. Each flow is represented with clear bi-directional lines, animation dots and real-time values, allowing you to easily monitor and analyze energy distribution. You can customize icons, colors, and layout, and even use formulas to calculate derived values, giving you a flexible and fully interactive energy management dashboard.",
@@ -138,10 +138,10 @@
       "diagram"
     ],
     "platform": "Javascript/Node.js",
-    "icon": "energiefluss-erweitert.png",
+    "icon": "energiefluss-erweitert-ng.png",
     "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/SKB-CGN/ioBroker.energiefluss-erweitert/main/admin/energiefluss-erweitert.png",
-    "readme": "https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert/blob/main/README.md",
+    "extIcon": "https://raw.githubusercontent.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/main/admin/energiefluss-erweitert-ng.png",
+    "readme": "https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/blob/main/README.md",
     "loglevel": "info",
     "webExtension": "lib/web.js",
     "mode": "daemon",
@@ -152,13 +152,13 @@
     "dataSource": "assumption",
     "localLinks": {
       "_default": {
-        "link": "%web_protocol%://%ip%:%web_port%/energiefluss-erweitert/?instance=%instance%",
-        "icon": "energiefluss-erweitert/img/icons/android/android-launchericon-144-144.png",
+        "link": "%web_protocol%://%ip%:%web_port%/energiefluss-erweitert-ng/?instance=%instance%",
+        "icon": "energiefluss-erweitert-ng/img/icons/android/android-launchericon-144-144.png",
         "color": "#538ea3",
-        "name": "Energiefluss - erweitert",
+        "name": "Energiefluss - erweitert NG",
         "intro": true,
-        "pro": "energiefluss-erweitert/?instance=%instance%",
-        "cloud": "energiefluss-erweitert/?instance=%instance%"
+        "pro": "energiefluss-erweitert-ng/?instance=%instance%",
+        "cloud": "energiefluss-erweitert-ng/?instance=%instance%"
       },
       "knowledgeBase": {
         "link": "https://www.kreyenborg.koeln/wissensdatenbank/Kategorie/iobroker-energiefluss-erweitert/",
@@ -214,7 +214,7 @@
         "admin": ">=7.6.20"
       }
     ],
-    "dataFolder": "energiefluss-erweitert.%INSTANCE%",
+    "dataFolder": "energiefluss-erweitert-ng.%INSTANCE%",
     "messagebox": true
   },
   "protectedNative": [
@@ -631,17 +631,17 @@
       "type": "meta",
       "common": {
         "name": {
-          "en": "Storage for energiefluss-erweitert",
-          "de": "Speicher für energiefluss-erweitert",
+          "en": "Storage for energiefluss-erweitert-ng",
+          "de": "Speicher für energiefluss-erweitert-ng",
           "ru": "Хранилище для энергосберегающих устройств",
-          "pt": "Armazenamento para energiefluss-erweitert",
-          "nl": "Opslag voor energiefluss-erweitert",
-          "fr": "Stockage pour energiefluss-erweitert",
-          "it": "Stoccaggio per energiefluss-erweitert",
-          "es": "Almacenamiento para energiefluss-erweitert",
-          "pl": "Przechowywanie dla energiefluss-erweitert",
+          "pt": "Armazenamento para energiefluss-erweitert-ng",
+          "nl": "Opslag voor energiefluss-erweitert-ng",
+          "fr": "Stockage pour energiefluss-erweitert-ng",
+          "it": "Stoccaggio per energiefluss-erweitert-ng",
+          "es": "Almacenamiento para energiefluss-erweitert-ng",
+          "pl": "Przechowywanie dla energiefluss-erweitert-ng",
           "uk": "Сховище для зберігання енергії",
-          "zh-cn": "Storage for energiefluss-erweitert"
+          "zh-cn": "Storage for energiefluss-erweitert-ng"
         },
         "type": "meta.user"
       },

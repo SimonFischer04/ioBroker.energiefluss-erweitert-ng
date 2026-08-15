@@ -2,7 +2,7 @@ name: Bug report
 description: Something is not working as it should
 title: "[Bug]: "
 assignees:
-  - SKB-CGN
+  - SimonFischer04
 
 body:
   - type: markdown
@@ -10,7 +10,7 @@ body:
       value: |
         This issue form is for reporting issues only! If you want to start a discussion or ask a question, please use the [discussion forum][df].
 
-        [df]: https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert/discussions
+        [df]: https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/discussions
   - type: textarea
     id: bug
     validations:
@@ -66,4 +66,4 @@ body:
     attributes:
       label: Version
       description: >
-        Version of the installed Energiefluss-erweitert
+        Version of the installed Energiefluss-erweitert NG
