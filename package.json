@@ -70,7 +70,8 @@
     "check": "tsc --noEmit -p tsconfig.check.json",
     "lint": "eslint -c eslint.config.mjs .",
     "translate": "translate-adapter",
-    "release": "release-script"
+    "release": "release-script",
+    "minify:functions": "terser private/functions.js --compress --mangle --output www/js/functions.min.js"
   },
   "bugs": {
     "url": "https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert/issues"
