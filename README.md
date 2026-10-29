@@ -1,13 +1,3 @@
-# ioBroker.energiefluss-erweitert-ng
-
-Fork of https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert with all the fixes and improvements upstream refuses.
-Despite that, this adapter tries to be backwards compatible with configuration from the base adapter so you should be able to just copy-paste your existing configuration into this adapter and it should just work. The fork also tries to include upstream changes regularly. 
-
-## Current extended features:
-- support for running behind reverse proxy (on non / root path like f.e. /web/ioBroker.energiefluss-erweitert-ng)
-
----
-
 ![Logo](admin/energiefluss-erweitert-ng.png)
 
 # ioBroker.energiefluss-erweitert-ng
@@ -28,21 +18,37 @@ Despite that, this adapter tries to be backwards compatible with configuration f
 ![Test and Release](https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/workflows/Test%20and%20Release/badge.svg)
 
 ## energiefluss-erweitert-ng adapter for ioBroker
+
+> [!NOTE]
+> This adapter is a fork of [ioBroker.energiefluss-erweitert](https://github.com/SKB-CGN/ioBroker.energiefluss-erweitert) by SKB with fixes and improvements that are not (yet) available upstream.
+> It is installed as its own adapter (`energiefluss-erweitert-ng`) and can run side by side with the original one.
+> It aims to stay backwards compatible with the configuration of the original adapter, so you should be able to copy-paste your existing configuration into this adapter. Upstream changes are merged regularly.
+>
+> Please report issues of this fork [here](https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/issues) and not in the upstream repository.
+
+### Additional features compared to upstream
+- Support for running behind a reverse proxy on a non-root path (e.g. `/web/ioBroker.energiefluss-erweitert-ng`)
+
 This adapter provides a dynamic and animated visualization of energy flows for all connected elements in your smart home. It supports sources like photovoltaics, storage systems (batteries), household consumption, grid import/export, electric vehicle charging, and other energy-consuming or generating devices. Each flow is represented with clear bi-directional lines, animation dots and real-time values, allowing you to easily monitor and analyze energy distribution. You can customize icons, colors, and layout, and even use formulas to calculate derived values, giving you a flexible and fully interactive energy management dashboard.
 
 ## Documentation
 
-* :book: [Forum thread](https://forum.iobroker.net/topic/64734/test-adapter-energiefluss-erweitert-v0-0-x-github-latest)
+* :book: [Forum thread (upstream)](https://forum.iobroker.net/topic/64734/test-adapter-energiefluss-erweitert-v0-0-x-github-latest)
 * :gb: [English description](./docs/en/README.md)
 * :de: [Deutsche Beschreibung](./docs/de/README.md)
-* :eyeglasses: [Views Showcase](https://forum.iobroker.net/topic/74890/energiefluss-erweitert-ansichten/)
-* :grey_question: [Wiki](https://www.kreyenborg.koeln/wissensdatenbank/Kategorie/iobroker-energiefluss-erweitert/)
+* :eyeglasses: [Views Showcase (upstream)](https://forum.iobroker.net/topic/74890/energiefluss-erweitert-ansichten/)
+* :grey_question: [Wiki (upstream)](https://www.kreyenborg.koeln/wissensdatenbank/Kategorie/iobroker-energiefluss-erweitert/)
 
 ## Changelog
 <!--
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (SimonFischer04) First release as standalone adapter `energiefluss-erweitert-ng` (fork of `energiefluss-erweitert` 0.8.3)
+- (SimonFischer04) Added: Support for running behind a reverse proxy on a non-root path (upstream #502)
+- (SimonFischer04) Removed: Donation links and PayPal buttons of the original author
+
 ### 0.8.3 (2026-08-07)
 - (copilot) Adapter requires node.js >= 22 now
 - Added: Animation duration for 'Power-saving'-mode editable. Defaults to 1200ms.
@@ -85,6 +91,7 @@ This adapter provides a dynamic and animated visualization of energy flows for a
 ## License
 MIT License
 
+Copyright (c) 2026 Simon Fischer <simi.fischa@gmail.com>
 Copyright (c) 2025-2026 SKB <info@skb-web.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

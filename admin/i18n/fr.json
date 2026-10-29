@@ -1,7 +1,6 @@
 {
     "accessKeyTx": "Utilisez la clé d'accès du navigateur « e » dans la vue en direct pour accéder à nouveau à la page de configuration.",
     "browserTx": "Navigateur",
-    "donate": "Si vous aimez cet adaptateur, pensez à faire un don pour soutenir mon travail.",
     "ex_password": "Définissez un mot de passe pour protéger la configuration à l'intérieur de l'espace de travail",
     "introTx": "Pour configurer l'adaptateur, veuillez l'ouvrir via le lien d'instance. Vous y trouverez la roue de configuration !",
     "keyCombinationTx": "combinaison de touches",
