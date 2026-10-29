@@ -9,33 +9,6 @@
          "type": "panel",
          "label": "main_settings",
          "items": {
-            "_donateTxt": {
-               "type": "staticText",
-               "text": "donate",
-               "xs": 12,
-               "sm": 12,
-               "md": 12,
-               "lg": 12,
-               "xl": 12
-            },
-            "_donate": {
-               "type": "staticImage",
-               "tooltip": "PayPal.Me",
-               "noTranslation": true,
-               "href": "https://www.paypal.com/donate/?hosted_button_id=XNR6XFB9UZ8UJ",
-               "src": "paypal-donate-button.png",
-               "xs": 6,
-               "sm": 6,
-               "md": 4,
-               "lg": 2,
-               "xl": 1,
-               "newLine": true
-            },
-            "_divider0": {
-               "newLine": true,
-               "type": "divider",
-               "color": "primary"
-            },
             "_introTx": {
                "type": "staticText",
                "text": "introTx",

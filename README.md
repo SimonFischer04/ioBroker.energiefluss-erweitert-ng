@@ -47,6 +47,7 @@ This adapter provides a dynamic and animated visualization of energy flows for a
 ### **WORK IN PROGRESS**
 - (SimonFischer04) First release as standalone adapter `energiefluss-erweitert-ng` (fork of `energiefluss-erweitert` 0.8.3)
 - (SimonFischer04) Added: Support for running behind a reverse proxy on a non-root path (upstream #502)
+- (SimonFischer04) Removed: Donation links and PayPal buttons of the original author
 
 ### 0.8.3 (2026-08-07)
 - (copilot) Adapter requires node.js >= 22 now
