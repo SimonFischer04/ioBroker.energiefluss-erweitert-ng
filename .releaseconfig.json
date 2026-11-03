@@ -1,4 +1,5 @@
 {
+	"branchPattern": ["ng"],
 	"plugins": [
 		"iobroker",
 		"license",
