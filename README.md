@@ -44,7 +44,7 @@ This adapter provides a dynamic and animated visualization of energy flows for a
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.8.4 (2026-11-03)
 - (SimonFischer04) First release as standalone adapter `energiefluss-erweitert-ng` (fork of `energiefluss-erweitert` 0.8.3)
 - (SimonFischer04) Added: Support for running behind a reverse proxy on a non-root path (upstream #502)
 - (SimonFischer04) Removed: Donation links and PayPal buttons of the original author
@@ -81,10 +81,6 @@ This adapter provides a dynamic and animated visualization of energy flows for a
 - Added: Better support for touch-devices including different modes for moving the workspace and editing elements
 - Added: Few language and design corrections, code optimization
 - Added: Right Clicking or long press on liveview opens a context menu, to easily switch between instances or display the configuration
-
-### 0.7.8 (2025-06-18)
-- Added: Convert a text element to a datasource element
-- Added: Now supports Web-Adapter with socket.io adapter configured (#333)
 
 [Older changelogs can be found there](CHANGELOG_OLD.md)
 

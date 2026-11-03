@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "energiefluss-erweitert-ng",
-    "version": "0.8.3",
+    "version": "0.8.4",
     "news": {
+      "0.8.4": {
+        "en": "First release as standalone adapter `energiefluss-erweitert-ng` (fork of `energiefluss-erweitert` 0.8.3)\nAdded: Support for running behind a reverse proxy on a non-root path (upstream #502)\nRemoved: Donation links and PayPal buttons of the original author",
+        "de": "Erste Version als Standalone-Adapter `energiefluss-erweitert-ng` (Fork von `energiefluss-erweitert` 0.8.3)\nHinzugefügt: Unterstützung für Reverse-Proxy ohne Root-Pfad (Upstream #502)\nEntfernt: Spendenlinks und PayPal-Buttons des Urautors",
+        "ru": "Первый выпуск в виде автономного адаптера `energiefluss-erweitert-ng` (форк `energiefluss-erweitert` 0.8.3)\nДобавлено: поддержка работы за обратным прокси-сервером по некорневому пути (upstream #502)\nУдалено: ссылки для пожертвований и кнопки PayPal оригинального автора",
+        "pt": "Primeiro lançamento como adaptador autônomo `energiefluss-erweitert-ng` (fork de `energiefluss-erweitert` 0.8.3)\nAdicionado: suporte a um proxy reverso em um caminho não raiz (upstream #502)\nRemovido: links de doação e botões PayPal do autor original",
+        "nl": "Eerste versie als zelfstandige adapter `energiefluss-erweitert-ng` (vork van `energiefluss-erweitert` 0.8.3)\nToegevoegd: Ondersteuning om achter een reverse proxy te draaien op een pad dat niet de root is (stroomopwaarts #502)\nVerwijderd: donatielinks en PayPal-knoppen van de oorspronkelijke auteur",
+        "fr": "Première version en adaptateur autonome « energiefluss-erweitert-ng » (fork de « energiefluss-erweitert » 0.8.3)\nAjouté : possibilité d'utiliser un proxy inverse sur un chemin non root (en amont #502)\nSupprimé : liens de dons et boutons PayPal de l'auteur d'origine",
+        "it": "Prima versione come adattatore autonomo `energiefluss-erweitert-ng` (fork di `energiefluss-erweitert` 0.8.3)\nAggiunto: supporto per un proxy inverso su un percorso non root (upstream #502)\nRimosso: link per donazioni e pulsanti PayPal dell'autore",
+        "es": "Primera versión como adaptador independiente `energiefluss-erweitert-ng` (bifurcación de `energiefluss-erweitert` 0.8.3)\nAñadido: Soporte para ejecutar un proxy inverso en una ruta no raíz (upstream #502)\nEliminado: enlaces de donación y botones de PayPal del autor original",
+        "pl": "Pierwsze wydanie jako samodzielny adapter „energiefluss-erweitert-ng” (widelec „energiefluss-erweiter” 0.8.3)\nDodano: Obsługa uruchamiania za odwrotnym serwerem proxy na ścieżce innej niż root (upstream #502)\nUsunięto: Linki do darowizn i przyciski PayPal oryginalnego autora",
+        "uk": "Перший випуск як автономний адаптер `energiefluss-erweitert-ng` (вилка або `energiefluss-розширювальня` 0.8.3)\nДодано: Підтримка запуску за зворотним проксі на некореневому шляху (вище за течією #502)\nВилучено: Посилання на пожертвування та кнопки PayPal оригінального автора",
+        "zh-cn": "首次作为独立适配器 “energiefluss-erweitert-ng”（“energiefluss-erweitert” 0.8.3 的分支）发布\n新增：支持在非根路径上在反向代理后面运行（上游 #502）\n移除：原始作者的捐款链接和PayPal按钮"
+      },
       "0.8.3": {
         "en": "Adapter requires node.js >= 22 now\nAdded: Animation duration for 'Power-saving'-mode editable. Defaults to 1200ms.\nAdded: Rectangels can now be rotated and have 4 more connection points in the corner, which appear when the element is rotated >0°\nAdded: Faster and more accurate line-rendering\nFIX: Some small fixes and improvements",
         "de": "Adapter benötigt node.js >= 22 jetzt\nHinzugefügt: Animationsdauer für \"Power-saving\"-Modus editierbar. Standardmäßig 1200ms.\nHinzugefügt: Rectangels können jetzt gedreht werden und haben 4 weitere Verbindungspunkte in der Ecke, die erscheinen, wenn das Element >0° gedreht wird\nHinzugefügt: Schnelleres und genaueres Line-Rendering\nFIX: Einige kleine Fixes und Verbesserungen",
@@ -80,19 +93,6 @@
         "pl": "FIX: Issues found by jOBroker- Adapter- Checker (348)\nDodano: Przy dodawaniu nowych danych, powiązana nazwa tych danych jest ustawiana jako rekomendowany alias",
         "uk": "FIX: Питання, знайдені ioBroker-адаптер-Checker (348)\nДодано: При додаванні нового джерела даних, асоційоване ім'я цього джерела даних встановлюється як рекомендована псевдонім",
         "zh-cn": "FIX: ioBroker-Adapter-Checker(348)发现的问题\n添加:在添加新数据源时,此数据源的相关名称被设定为推荐的别名"
-      },
-      "0.7.6": {
-        "en": "FIX: Removed instances from welcome screen, as this is confusing, if not using iobroker.pro",
-        "de": "FIX: Entfernen von Instanzen vom Willkommensbildschirm, da dies verwirrend ist, wenn nicht mit iobroker. Produzent",
-        "ru": "FIX: удаленные экземпляры с приветственного экрана, так как это сбивает с толку, если не использовать iobroker. про",
-        "pt": "FIX: instâncias removidas da tela de boas-vindas, como isso é confuso, se não estiver usando o iobroker. pro",
-        "nl": "FIX: Verwijderde gevallen van welkom scherm, omdat dit verwarrend is, als niet met behulp van iobroker. pro",
-        "fr": "FIX: Supprimé les instances de l'écran d'accueil, car cela est déroutant, si pas utiliser iobroker. pour",
-        "it": "FIX: Le istanze eliminate dalla schermata di benvenuto, in quanto questo è confuso, se non utilizzando lo iobroker. Pro",
-        "es": "FIX: Quitar las instancias de la pantalla de bienvenida, ya que esto es confuso, si no utilizar iobroker. pro",
-        "pl": "FIX: Usunięto instancje z ekranu powitalnego, ponieważ jest to mylące, jeśli nie używa iobrokera. pro",
-        "uk": "FIX: Вилучені екземпляри з екрана привітання, оскільки це конфускування, якщо не використовувати іоброкер. Про нас",
-        "zh-cn": "FIX: 从欢迎屏幕中删除了实例, 因为这样会让人困惑, 亲"
       }
     },
     "titleLang": {

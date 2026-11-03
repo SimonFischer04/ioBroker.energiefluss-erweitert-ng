@@ -1,4 +1,8 @@
 # Older changes
+## 0.7.8 (2025-06-18)
+- Added: Convert a text element to a datasource element
+- Added: Now supports Web-Adapter with socket.io adapter configured (#333)
+
 ## 0.7.7 (2025-06-12)
 - FIX: Issues found by ioBroker-Adapter-Checker (348)
 - Added: When adding a new datasource, the associated name of this datasource is set as recommended alias
