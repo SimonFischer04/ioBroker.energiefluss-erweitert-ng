@@ -28,7 +28,11 @@ Eine Instanz kann zum Beispiel eine PV-Übersicht und eine Detailansicht pro Wec
 2. Füge Elemente hinzu. Über **Ansicht** kannst du beim Bearbeiten zwischen den Ansichten wechseln. Unter **Ansichten verwalten** kannst du die aktuelle Ansicht umbenennen oder eine zusätzliche Ansicht samt ihren Elementen löschen.
 3. Speichere den Arbeitsbereich. Bei mehreren Ansichten kannst du auch in der Live-Ansicht zwischen ihnen wechseln.
 
+![Wechselrichteransicht im Editor mit Ansichtsauswahl und Ansichtenverwaltung](../images/views-editor.png)
+
 Um Wechselrichterdetails per Klick aus der PV-Übersicht zu öffnen, bearbeite das betreffende Übersichtselement. Wähle unter **Browser-Frame** bei **Ansicht als Ziel verwenden** die Detailansicht. Der Editor trägt den Link ein und wählt **iFrame-Overlay**. Du kannst auch weiterhin eine vollständige URL von Hand eingeben.
+
+![Wechselrichterdetails im iFrame-Overlay über der PV-Übersicht](../images/views-overlay.png)
 
 Über **Live-Ansicht** im Editor erhältst du den Direktlink zur ausgewählten Ansicht. Für zusätzliche Ansichten enthält er eine feste ID (`?instance=0&view=<ID>`), die beim Umbenennen erhalten bleibt. Ohne `view` öffnet der Link die Standardansicht. Im VIS-Widget kannst du den Wert des URL-Parameters `view` in das Feld **Ansichts-ID** kopieren. Ein leeres Feld zeigt die Standardansicht der gewählten Adapterinstanz.
 

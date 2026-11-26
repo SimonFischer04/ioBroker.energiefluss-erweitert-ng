@@ -28,7 +28,11 @@ One instance can hold a PV overview and a detail view for each inverter. Each vi
 2. Add elements. Use the **View** selector to switch views as you edit. Use **Manage views** to rename the current view or delete an additional view along with its elements.
 3. Save the workspace. When there are multiple views, you can also switch between them in the live display.
 
+![Inverter view in the editor with the view selector and view management controls](../images/views-editor.png)
+
 To open inverter details with a click from your PV overview, edit the overview element. Under **Browser Frame**, select the detail view from **Use a view as destination**. The editor fills in the link and selects **iFrame overlay**. You can also enter a full URL manually.
+
+![Inverter details in an iFrame overlay over the PV overview](../images/views-overlay.png)
 
 The editor’s **Live-View** link opens the selected view. For additional views it includes a stable ID (`?instance=0&view=<ID>`), so the link still works after a rename. Omitting `view` opens the default view. In the VIS widget, copy the value of the `view` URL parameter into **View ID**, or leave the field empty to show the selected adapter instance’s default view.
 
