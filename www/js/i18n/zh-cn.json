@@ -239,6 +239,7 @@
     "lbl_frame_open": "在以下位置打开 URL",
     "lbl_frame_options": "浏览器框架",
     "lbl_frame_url": "网址",
+    "lbl_frame_view": "使用视图作为目标",
     "lbl_freeform_text": "显示自由格式的文本字段",
     "lbl_gallery": "画廊",
     "lbl_general": "一般的",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "值动画",
     "lbl_value_animation": "时间（毫秒）",
     "lbl_value_changed": "如果值的符号发生了改变，则向另一个方向填充（反向）",
+    "lbl_view": "视图",
     "lbl_viewbox": "视图框",
     "lbl_width": "宽度",
     "lbl_width_dot": "点的宽度",
@@ -586,5 +588,11 @@
     "value_toast_restore": "恢复提示",
     "value_top": "元素顶部",
     "value_top_left": "左上角",
-    "value_top_right": "右上"
+    "value_top_right": "右上",
+    "view_confirm_delete": "删除视图“%s”及其元素？",
+    "view_create": "新建视图",
+    "view_default": "默认视图",
+    "view_manage": "管理视图",
+    "view_name": "视图名称",
+    "view_rename": "重命名"
 }

@@ -14,13 +14,17 @@
     <link class=favicon rel=icon type=image/ico href="img/icons/favicon.ico">
     <link rel="stylesheet" href="style/jquery-ui.css">
     <link rel="stylesheet" href="style/style.css?v=0.8.4">
+    <link rel="stylesheet" href="style/views.css">
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/translate.min.js"></script>
-    <script src="js/words.js?v=0.8.2.1"></script>
-    <script src="js/functions.min.js?v=0.8.4"></script>
+    <script src="js/words.js?v=0.8.4-views"></script>
+    <script src="js/view-model.js"></script>
+    <script src="js/view-runtime.js"></script>
+    <script src="js/functions.min.js?v=0.8.4-views"></script>
+    <script src="js/view-controls.js" defer></script>
 
     <style id="style_animation"></style>
     <style id="style_user"></style>
@@ -126,6 +130,10 @@
         <a href="#" class="tooltip" data-title="title_configuration" accesskey="e">
             <span class="iconify config_icon" data-icon="mdi:cog" data-width="24" data-height="24"></span>
         </a>
+    </div>
+    <div id="view-navigation" class="live" hidden>
+        <label for="view-picker" class="translate" data-lang="lbl_view">View</label>
+        <select id="view-picker"></select>
     </div>
     <div id="toast-container" class="toast-container scrollbar"></div>
 </body>

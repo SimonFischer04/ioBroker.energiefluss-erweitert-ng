@@ -15,18 +15,22 @@
     <link rel="stylesheet" href="style/jquery-ui.css">
     <link rel="stylesheet" href="style/multiselect.css">
     <link rel="stylesheet" href="style/style.css?v=0.8.4">
+    <link rel="stylesheet" href="style/views.css">
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/multiselect.min.js"></script>
     <script src="js/translate.min.js"></script>
-    <script src="js/words.js?v=0.8.2.1"></script>
+    <script src="js/words.js?v=0.8.4-views"></script>
     <script src="js/jscolor.min.js"></script>
     <script src="js/ace/ace.js"></script>
     <script src="js/ace/ext-language_tools.js"></script>
     <script src="js/ace/ext-searchbox.js"></script>
-    <script src="js/functions.min.js?v=0.8.4"></script>
+    <script src="js/view-model.js"></script>
+    <script src="js/view-runtime.js"></script>
+    <script src="js/functions.min.js?v=0.8.4-views"></script>
+    <script src="js/view-controls.js" defer></script>
 
     <style id="style_animation"></style>
     <style id="style_user"></style>
@@ -1427,6 +1431,13 @@
                                                 data-icon="material-symbols-light:help-outline-rounded" data-width="32"
                                                 data-height="32"></span>
                                         </a>
+                                        <div class="form_div select" id="frame_view_picker" hidden>
+                                            <label for="frame_view" class="form_label translate"
+                                                data-lang="lbl_frame_view">Use a view as destination</label>
+                                            <div class="select-option">
+                                                <select class="input_select" id="frame_view"></select>
+                                            </div>
+                                        </div>
                                         <div class="form_div select">
                                             <label for="elm_frame" class="form_label translate"
                                                 data-lang="lbl_frame_open">Open in</label>
@@ -1931,6 +1942,18 @@
                 </div>
                 <div class="menuContainer">
                     <div class="buttonContainer">
+                        <div id="view-navigation" hidden>
+                            <label for="view-picker" class="translate" data-lang="lbl_view">View</label>
+                            <select id="view-picker"></select>
+                            <select id="view-management">
+                                <option value="" class="translate" data-lang="view_manage">Manage views</option>
+                                <option value="create" class="translate" data-lang="view_create">New view</option>
+                                <option value="rename" class="translate" data-lang="view_rename">Rename</option>
+                                <option value="remove" class="translate" data-lang="value_delete">Delete</option>
+                            </select>
+                            <a id="view-live-link" target="_blank" rel="noopener" class="translate"
+                                data-lang="lbl_settings_liveView">Live view</a>
+                        </div>
                         <a href="javascript:;" class="toggle-link open exclude" id="show_hide_config">
                             <span class="arrow">&#9654;</span>
                             <span class="translate" data-lang="value_hide_controls">Hide Controls</span>

@@ -239,6 +239,7 @@
     "lbl_frame_open": "Abrir URL em",
     "lbl_frame_options": "Quadro do navegador",
     "lbl_frame_url": "URL",
+    "lbl_frame_view": "Usar uma vista como destino",
     "lbl_freeform_text": "Mostrar campo de texto de forma livre",
     "lbl_gallery": "Galeria",
     "lbl_general": "Em geral",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Animação de valor",
     "lbl_value_animation": "Tempo em ms",
     "lbl_value_changed": "Se o valor mudou de sinal, preencha a outra direção (reverso)",
+    "lbl_view": "Vista",
     "lbl_viewbox": "Caixa de visualização",
     "lbl_width": "Largura",
     "lbl_width_dot": "Largura do ponto",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Restaurar as dicas",
     "value_top": "Elemento superior",
     "value_top_left": "canto superior esquerdo",
-    "value_top_right": "canto superior direito"
+    "value_top_right": "canto superior direito",
+    "view_confirm_delete": "Eliminar a vista «%s» e os seus elementos?",
+    "view_create": "Nova vista",
+    "view_default": "Vista predefinida",
+    "view_manage": "Gerir vistas",
+    "view_name": "Nome da vista",
+    "view_rename": "Renomear"
 }

@@ -20,10 +20,17 @@
 
 ---
 
-## 📑 Views / Tabs
-- [x] Creation of views/tabs is possible
-- [x] Tabs can contain icons and text
-- [x] Views/Tabs can be flexibly shown or hidden
+## 📑 Multiple views per instance
+
+One instance can hold a PV overview and a detail view for each inverter. Each view has its own elements, connections and animations. All views share the same data sources, calculations and workspace settings. An existing configuration opens as the default view.
+
+1. In the editor’s **Overview**, open **Manage views**, choose **New view** and enter a name. The new view starts with an empty canvas.
+2. Add elements. Use the **View** selector to switch views as you edit. Use **Manage views** to rename the current view or delete an additional view along with its elements.
+3. Save the workspace. When there are multiple views, you can also switch between them in the live display.
+
+To open inverter details with a click from your PV overview, edit the overview element. Under **Browser Frame**, select the detail view from **Use a view as destination**. The editor fills in the link and selects **iFrame overlay**. You can also enter a full URL manually.
+
+The editor’s **Live-View** link opens the selected view. For additional views it includes a stable ID (`?instance=0&view=<ID>`), so the link still works after a rename. Omitting `view` opens the default view. In the VIS widget, copy the value of the `view` URL parameter into **View ID**, or leave the field empty to show the selected adapter instance’s default view.
 
 ---
 

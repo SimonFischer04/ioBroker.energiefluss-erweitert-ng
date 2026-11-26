@@ -1,0 +1,31 @@
+#view-navigation:not([hidden]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    padding: 2px 5px;
+    color: var(--black);
+    background: var(--white);
+}
+
+#view-navigation.live {
+    position: fixed;
+    bottom: 0;
+    left: 32px;
+    max-width: calc(100vw - 70px);
+    border-radius: 4px;
+}
+
+#view-navigation select {
+    max-width: min(18em, 65vw);
+    color: var(--black);
+    background-color: var(--white);
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    font: inherit;
+    padding: 3px;
+}
+
+#view-navigation a:focus-visible {
+    outline: 2px solid var(--primary);
+}

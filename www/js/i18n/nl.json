@@ -239,6 +239,7 @@
     "lbl_frame_open": "URL openen in",
     "lbl_frame_options": "Browserframe",
     "lbl_frame_url": "URL",
+    "lbl_frame_view": "Een weergave als bestemming gebruiken",
     "lbl_freeform_text": "Vrije tekstveld weergeven",
     "lbl_gallery": "Galerij",
     "lbl_general": "Algemeen",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Waarde animatie",
     "lbl_value_animation": "Tijd in ms",
     "lbl_value_changed": "Als de waarde van teken is veranderd, vul dan de andere richting in (omgekeerd)",
+    "lbl_view": "Weergave",
     "lbl_viewbox": "BekijkBox",
     "lbl_width": "Breedte",
     "lbl_width_dot": "Breedte van de stip",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Herstel de hints",
     "value_top": "Element bovenaan",
     "value_top_left": "linksboven",
-    "value_top_right": "rechtsboven"
+    "value_top_right": "rechtsboven",
+    "view_confirm_delete": "De weergave ‘%s’ en de bijbehorende elementen verwijderen?",
+    "view_create": "Nieuwe weergave",
+    "view_default": "Standaardweergave",
+    "view_manage": "Weergaven beheren",
+    "view_name": "Naam van de weergave",
+    "view_rename": "Hernoemen"
 }

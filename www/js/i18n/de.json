@@ -239,6 +239,7 @@
     "lbl_frame_open": "URL öffnen in",
     "lbl_frame_options": "Browser-Frame",
     "lbl_frame_url": "URL",
+    "lbl_frame_view": "Ansicht als Ziel verwenden",
     "lbl_freeform_text": "Freiform-Textfeld anzeigen",
     "lbl_gallery": "Galerie",
     "lbl_general": "Allgemein",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Werteanimation",
     "lbl_value_animation": "Zeit in ms",
     "lbl_value_changed": "Wenn der Wert das Vorzeichen geändert hat, füllen Sie die andere Richtung aus (umgekehrt).",
+    "lbl_view": "Ansicht",
     "lbl_viewbox": "Ansichtsbox",
     "lbl_width": "Breite",
     "lbl_width_dot": "Breite des Punktes",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Stellen Sie die Hinweise wieder her",
     "value_top": "Element oben",
     "value_top_left": "oben links",
-    "value_top_right": "oben rechts"
+    "value_top_right": "oben rechts",
+    "view_confirm_delete": "Die Ansicht „%s“ und ihre Elemente löschen?",
+    "view_create": "Neue Ansicht",
+    "view_default": "Standardansicht",
+    "view_manage": "Ansichten verwalten",
+    "view_name": "Name der Ansicht",
+    "view_rename": "Umbenennen"
 }
