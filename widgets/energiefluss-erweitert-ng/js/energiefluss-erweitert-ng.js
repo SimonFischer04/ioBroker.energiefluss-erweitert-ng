@@ -20,6 +20,19 @@ $.extend(true, systemDictionary, {
         pl: 'instancja adaptera',
         'zh-cn': '适配器实例',
     },
+    energieflussErweitertNgView: {
+        en: 'View ID',
+        de: 'Ansichts-ID',
+        ru: 'Идентификатор представления',
+        pt: 'ID da vista',
+        nl: 'Weergave-ID',
+        fr: 'Identifiant de la vue',
+        it: 'ID della vista',
+        es: 'ID de la vista',
+        pl: 'Identyfikator widoku',
+        uk: 'Ідентифікатор подання',
+        'zh-cn': '视图 ID',
+    },
 });
 
 // this code can be placed directly in energiefluss-erweitert-ng.html
@@ -38,7 +51,12 @@ vis.binds['energiefluss-erweitert-ng'] = {
         }
 
         const sandbox = 'allow-forms allow-modals allow-popups allow-same-origin allow-scripts allow-top-navigation';
-        const text = `<iframe class="ef-Frame" title="Energiefluss-erweitert NG" src="/energiefluss-erweitert-ng/?instance=${instance}" sandbox="${sandbox}">`;
+        const params = new URLSearchParams({ instance });
+        const viewId = String(data._data.energieflussErweitertNgView ?? '').trim();
+        if (viewId) {
+            params.set('view', viewId);
+        }
+        const text = `<iframe class="ef-Frame" title="Energiefluss-erweitert NG" src="/energiefluss-erweitert-ng/?${params}" sandbox="${sandbox}">`;
 
         $(`#${widgetID}`).html(text);
     },

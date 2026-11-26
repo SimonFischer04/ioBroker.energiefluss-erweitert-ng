@@ -27,6 +27,8 @@
 > Please report issues of this fork [here](https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/issues) and not in the upstream repository.
 
 ### Additional features compared to upstream
+
+- Multiple named energy flow views per instance, with shared data sources and a direct link to each view
 - Support for running behind a reverse proxy on a non-root path (e.g. `/web/ioBroker.energiefluss-erweitert-ng`)
 
 This adapter provides a dynamic and animated visualization of energy flows for all connected elements in your smart home. It supports sources like photovoltaics, storage systems (batteries), household consumption, grid import/export, electric vehicle charging, and other energy-consuming or generating devices. Each flow is represented with clear bi-directional lines, animation dots and real-time values, allowing you to easily monitor and analyze energy distribution. You can customize icons, colors, and layout, and even use formulas to calculate derived values, giving you a flexible and fully interactive energy management dashboard.

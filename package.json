@@ -72,7 +72,7 @@
     "lint": "eslint -c eslint.config.mjs .",
     "translate": "translate-adapter",
     "release": "release-script",
-    "minify:functions": "terser private/functions.js --compress --mangle --output www/js/functions.min.js"
+    "minify:functions": "node scripts/build-functions.js"
   },
   "bugs": {
     "url": "https://github.com/SimonFischer04/ioBroker.energiefluss-erweitert-ng/issues"

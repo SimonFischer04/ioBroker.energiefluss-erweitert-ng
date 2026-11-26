@@ -1,0 +1,229 @@
+--- a/functions.js
++++ b/functions.js
+@@ -514,7 +514,7 @@
+             if (e == subscribeObjID[2] && t.val != appProperties.online && 1 == t.val && (appProperties.online = t.val,
+             $("#loading").fadeOut("fast"), $(".toast").fadeOut(300), displayMode)) {
+                 const e = (Math.random() + 1).toString(36).substring(7);
+-                window.location.href = `?instance=${appProperties.instance}&hash=${e}&lowPerformance=${appProperties.lowPerformance}&theme=${appProperties.theme}&lang=${systemLang}`;
++                window.location.href = energyFlowViewRuntime.reconnectUrl(e);
+             }
+         }, 0);
+     }), socket.on("reconnect", function() {
+@@ -654,6 +654,8 @@
+ }
+
+ async function refreshData(e, t = !1) {
++    e = energyFlowViewRuntime.filterData(e, t);
++    if (!e) return;
+     function o(e, n) {
+         if (t) return !1;
+         if (e === n) return !0;
+@@ -1224,7 +1226,7 @@
+     r && (r.innerHTML = "", r.append(a));
+ }
+
+-function checkDatasourcesInUse(e) {
++function checkDatasourcesInUse(e, configuration = energyFlowViewRuntime.snapshot()) {
+     let t = {}, o = 0;
+     return Object.entries(configuration.elements).forEach(n => {
+         const [a, i] = n;
+@@ -1369,6 +1371,7 @@
+ }
+
+ async function setLoadedConfig(e = !1) {
++    configuration = energyFlowViewRuntime.load(configuration);
+     console.debug("[Config] Setting Config"), await healthCheck();
+     if (configuration.basic.enable_icon_proxy) if (appProperties.isCloud) console.log("[Proxy] Using direct load via iconify-API!"),
+     loadAdditionalJSFile("js/iconify.min.js"); else if (appProperties.wwwExtLoaded) {
+@@ -1483,56 +1486,14 @@
+         configuration.basic.enable_ds_autocomplete && $("#elm_ds_source").autocomplete(dataSourceAutocompleteOptions);
+     }
+     if (Object.hasOwn(configuration, "elements")) {
+-        $(".placeholders").empty();
+-        const v = {
+-            elements: [],
+-            text: [],
+-            icon: []
+-        };
+-        for (const k in configuration.elements) {
+-            const C = configuration.elements[k];
+-            "text" == C.type || "icon" == C.type ? v[C.type].push({
+-                key: k,
+-                position: C.position ?? 1 / 0
+-            }) : v.elements.push({
+-                key: k,
+-                position: C.position ?? 1 / 0
+-            });
+-        }
+-        for (const A in v) v[A].sort(function(e, t) {
+-            return e.position - t.position;
+-        });
+-        for (const S in v) {
+-            const T = v[S];
+-            for (let I = 0; I < T.length; I++) {
+-                const O = T[I].key;
+-                svgElement(configuration.elements[O]);
+-            }
+-        }
+-        for (const E of Object.keys(configuration.defs)) svgElement(configuration.defs[E]);
+-        const x = [];
+-        for (const M in configuration.lines) {
+-            const P = configuration.lines[M];
+-            x.push({
+-                key: M,
+-                position: P.position ?? 1 / 0
+-            });
+-        }
+-        x.sort(function(e, t) {
+-            return e.position - t.position;
+-        });
+-        for (let j = 0; j < x.length; j++) {
+-            const L = x[j].key;
+-            svgElement(configuration.lines[L]);
+-        }
+-        for (const D of Object.keys(configuration.animations)) svgElement(configuration.animations[D]);
++        energyFlowViewRuntime.draw();
+         if (updateLineAnimation(), displayMode) {
+             configuration.basic.background_color && (console.debug("[Config]: Setting background color!"),
+             $("#style_user").append(`html,body { background-color: ${configuration.basic.background_color}; }`)),
+             $("#svg_display").attr({
+                 viewBox: "0 0 " + configuration.basic.width + " " + configuration.basic.height
+             }), $(".all_elements").removeClass("anim_element no_animation"), $("#config_link, #config_link_ctx").on("click", function() {
+-                window.location.replace("configuration.html?instance=" + appProperties.instance);
++                window.location.replace(window.energyFlowViewActions.url("configuration.html"));
+             }), $("#info_error_area").hide(), globalError = [], $("#config_link").toggle(configuration.basic.enable_config_icon);
+             if (configuration.basic.enable_low_performance || "true" === appProperties.lowPerformance) {
+                 console.log("[Config] Low performance mode activated!");
+@@ -1578,7 +1539,7 @@
+         $("#loading").fadeOut("fast"), $("#container_menu").removeClass("skeleton");
+     } else addToast("success", translateWord("succ_msg_loading_basic")), setTimeout(() => {
+         $("#loading").fadeOut("fast");
+-    }, 0), $("#config_link > a").attr("href", "configuration.html?instance=" + appProperties.instance).show();
++    }, 0), $("#config_link > a").attr("href", window.energyFlowViewActions.url("configuration.html")).show();
+ }
+
+ function updateLineAnimation() {
+@@ -1657,18 +1618,7 @@
+ }
+
+ function checkSVGSize(e, t) {
+-    function o(e, t) {
+-        const o = getElementCoords(e.id), n = Number("width" === t ? o.width : o.height);
+-        return ("width" === t ? o.x : o.y) + ("circle" === o.type || "text" === o.type ? n / 2 : n) + o.stroke;
+-    }
+-    function n(e) {
+-        return Object.values(configuration.elements).reduce((t, n) => o(n, e) > o(t, e) ? n : t);
+-    }
+-    const a = n("width"), i = n("height");
+-    return {
+-        width: e > o(a, "width"),
+-        height: t > o(i, "height")
+-    };
++    return energyFlowViewRuntime.canvasFits(e, t);
+ }
+
+ function checkElementBounds(e, t) {
+@@ -2036,7 +1986,7 @@
+
+ function exportElement(e) {
+     let t, o = Object.assign({}, configuration.elements[e]);
+-    [ "id", "source", "source_action", "pos_x", "pos_y", "group" ].forEach(e => delete o[e]);
++    [ "id", "source", "source_action", "pos_x", "pos_y", "group", "view" ].forEach(e => delete o[e]);
+     const n = getRandomInt(55);
+     $(`<div id="tmpDiv_${n}" class="tmpDiv" />`).appendTo("body"), $(`#tmpDiv_${n}`).prop("title", translateWord("value_export_element")).dialog({
+         resizable: !1,
+@@ -2691,6 +2641,7 @@
+                 override: t.override
+             };
+             console.debug("[Update View] Requesting new Data with: ", o), socket.emit("sendTo", appProperties.namespace, "_updateElementInView", o, function(t) {
++                if (configuration.elements[e[0]] !== c) return;
+                 if (t && t.error) console.error("[Update View] An error occured, while getting the updated value:", t.error); else {
+                     if (console.log(`[Update View] Returned from ioBroker: ${JSON.stringify(t.data)}`),
+                     Object.keys(t.data.override) > 0) {
+@@ -3483,7 +3434,9 @@
+       case "image":
+         {
+             i.push("type_image");
++            const generation = energyFlowViewRuntime.generation;
+             const t = await receiveImage(e.href);
++            if (generation !== energyFlowViewRuntime.generation) return;
+             l = document.createElementNS("http://www.w3.org/2000/svg", "image"), l.setAttribute("x", e.pos_x),
+             l.setAttribute("y", e.pos_y), l.setAttribute("preserveAspectRatio", e.preserveAspectRatio),
+             l.setAttribute("width", e.width), l.setAttribute("height", e.height), l.setAttribute("href", t),
+@@ -3526,13 +3479,14 @@
+     } else $(l).appendToWithIndex($(`#placeholder_${c}`), e.position);
+     "line" == e.type && configuration.basic.enable_line_animation && displayMode && "inline" == d && animatePath(e.id),
+     e?.degree > 0 && requestAnimationFrame(() => {
++        if (!l.isConnected) return;
+         const t = calculateRotation(e.id, e.degree);
+         l.setAttribute("transform", `rotate(${t.angle}, ${t.cx}, ${t.cy})`);
+     }), "function" == typeof n && n(e.id, e.type);
+ }
+
+ function getMaxID() {
+-    return Object.keys(configuration.elements).length > 0 ? Math.max(...Object.keys(configuration.elements).map(e => e)) + 1 : 0;
++    return energyFlowViewRuntime.nextElementId();
+ }
+
+ function getRandomInt(e) {
+@@ -3599,7 +3553,7 @@
+
+ function saveWorkspace() {
+     return new Promise((e, t) => {
+-        socket.emit("sendTo", appProperties.namespace, "_saveConfiguration", configuration, function(o) {
++        socket.emit("sendTo", appProperties.namespace, "_saveConfiguration", energyFlowViewRuntime.snapshot(), function(o) {
+             o && o.error ? (console.log("An error occured, while saving the backup. The following error was provided: ", o.error),
+             t(""), addToast("error", translateWord("failmsg_save_workspace"))) : (console.log("[Save] " + o.data),
+             getBackups("backup_list"), e(configuration));
+@@ -3662,6 +3616,7 @@
+ async function duplicateElements(e, t = !1, o = null) {
+     if (e.size > 0) {
+         globalConfigChanged = !0;
++        const generation = energyFlowViewRuntime.generation;
+         const n = new Set(e), a = n.size > 1 ? 15 : 0;
+         let i = 0;
+         $(".draggable").removeClass("draggable-multi dragging"), globalSelection.clear();
+@@ -3679,7 +3634,9 @@
+             r.id = s, r.group = null, configuration.elements[s] = r, saveUndoStep("add", r, ""),
+             1 == n.size ? await svgElement(configuration.elements[s], !1, !1, function(e, o) {
+                 appProperties.isMobile || (showConfigBar([ e ], o), t && addToast("info", translateWord("succ_msg_duplicate")));
+-            }) : await svgElement(configuration.elements[s]), addElementToSelection(s), i++;
++            }) : await svgElement(configuration.elements[s]);
++            if (generation !== energyFlowViewRuntime.generation) return;
++            addElementToSelection(s), i++;
+         }
+         $("#svg_config").focus();
+     }
+@@ -4436,7 +4393,7 @@
+                 url: e
+             };
+         }
+-        const C = await k(n.url), A = "http" != C.protocol ? "_overlay" : n.frame;
++        const C = await k(energyFlowViewRuntime.resolveFrameUrl(n.url)), A = "http" != C.protocol ? "_overlay" : n.frame;
+         switch (A) {
+           case "_blank":
+           case "_self":
+@@ -4937,6 +4894,7 @@
+         }
+         y();
+     }
++    document.addEventListener("energyflow-clear-selection", A);
+     u.addEventListener("mousedown", S), u.addEventListener("touchstart", S, !1), u.addEventListener("mousemove", T),
+     u.addEventListener("touchmove", T), u.addEventListener("mouseup", I), u.addEventListener("mouseleave", function(e) {
+         I(e);
+@@ -5402,11 +5360,11 @@
+                 t && t.remove();
+             }), appProperties.localMode) addToast("success", translateWord("succ_msg_local_output")); else {
+                 await saveWorkspace() && (addToast("success", translateWord("succ_msg_save_workspace")),
+-                "save_workspace_exit" == this.id && window.location.replace("index.html?instance=" + appProperties.instance));
+-            }
+-            aceLog.setValue(JSON.stringify(configuration, void 0, 4), -1);
++                "save_workspace_exit" == this.id && window.location.replace(window.energyFlowViewActions.url("index.html")));
++            }
++            aceLog.setValue(JSON.stringify(energyFlowViewRuntime.snapshot(), void 0, 4), -1);
+         }), $("#workspace_exit").click(function() {
+-            window.location.replace("index.html?instance=" + appProperties.instance);
++            window.location.replace(window.energyFlowViewActions.url("index.html"));
+         }), $(".check_datasources").click(async function(e) {
+             const t = Object.entries(configuration.datasources), o = t.length;
+             let n = 0;

@@ -239,6 +239,7 @@
     "lbl_frame_open": "Otwórz adres URL w",
     "lbl_frame_options": "Ramka przeglądarki",
     "lbl_frame_url": "Adres URL",
+    "lbl_frame_view": "Użyj widoku jako miejsca docelowego",
     "lbl_freeform_text": "Pokaż pole tekstowe o dowolnej formie",
     "lbl_gallery": "Galeria",
     "lbl_general": "Ogólny",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Animacja wartości",
     "lbl_value_animation": "Czas w milisekundach",
     "lbl_value_changed": "Jeżeli wartość zmieniła znak, wypełnij w przeciwnym kierunku (odwróć)",
+    "lbl_view": "Widok",
     "lbl_viewbox": "WidokPole",
     "lbl_width": "Szerokość",
     "lbl_width_dot": "Szerokość kropki",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Przywróć wskazówki",
     "value_top": "Element górny",
     "value_top_left": "lewy górny róg",
-    "value_top_right": "prawy górny róg"
+    "value_top_right": "prawy górny róg",
+    "view_confirm_delete": "Usunąć widok „%s” i jego elementy?",
+    "view_create": "Nowy widok",
+    "view_default": "Widok domyślny",
+    "view_manage": "Zarządzaj widokami",
+    "view_name": "Nazwa widoku",
+    "view_rename": "Zmień nazwę"
 }

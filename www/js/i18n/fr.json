@@ -239,6 +239,7 @@
     "lbl_frame_open": "Ouvrir l'URL dans",
     "lbl_frame_options": "Cadre du navigateur",
     "lbl_frame_url": "URL",
+    "lbl_frame_view": "Utiliser une vue comme destination",
     "lbl_freeform_text": "Afficher le champ de texte libre",
     "lbl_gallery": "Galerie",
     "lbl_general": "Général",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Animation de valeur",
     "lbl_value_animation": "Heure en ms",
     "lbl_value_changed": "Si la valeur a changé de signe, remplissez dans l'autre sens (inverse)",
+    "lbl_view": "Vue",
     "lbl_viewbox": "Boîte de visualisation",
     "lbl_width": "Largeur",
     "lbl_width_dot": "Largeur du point",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Restaurer les indices",
     "value_top": "Élément supérieur",
     "value_top_left": "en haut à gauche",
-    "value_top_right": "en haut à droite"
+    "value_top_right": "en haut à droite",
+    "view_confirm_delete": "Supprimer la vue « %s » et ses éléments ?",
+    "view_create": "Nouvelle vue",
+    "view_default": "Vue par défaut",
+    "view_manage": "Gérer les vues",
+    "view_name": "Nom de la vue",
+    "view_rename": "Renommer"
 }

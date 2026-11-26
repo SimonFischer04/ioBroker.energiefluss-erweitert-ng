@@ -239,6 +239,7 @@
     "lbl_frame_open": "Открыть URL в",
     "lbl_frame_options": "Рамка браузера",
     "lbl_frame_url": "URL",
+    "lbl_frame_view": "Использовать вид как цель",
     "lbl_freeform_text": "Показать поле для свободного текста",
     "lbl_gallery": "Галерея",
     "lbl_general": "Общий",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Значение анимации",
     "lbl_value_animation": "Время в мс",
     "lbl_value_changed": "Если значение изменило знак, заполните другое направление (обратное)",
+    "lbl_view": "Вид",
     "lbl_viewbox": "ViewBox",
     "lbl_width": "Ширина",
     "lbl_width_dot": "Ширина точки",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Восстановить подсказки",
     "value_top": "Верхний элемент",
     "value_top_left": "вверху слева",
-    "value_top_right": "вверху справа"
+    "value_top_right": "вверху справа",
+    "view_confirm_delete": "Удалить вид «%s» и его элементы?",
+    "view_create": "Новый вид",
+    "view_default": "Вид по умолчанию",
+    "view_manage": "Управление видами",
+    "view_name": "Название вида",
+    "view_rename": "Переименовать"
 }

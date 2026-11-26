@@ -239,6 +239,7 @@
     "lbl_frame_open": "Відкрити URL-адресу в",
     "lbl_frame_options": "Рамка браузера",
     "lbl_frame_url": "URL-адреса",
+    "lbl_frame_view": "Використати подання як ціль",
     "lbl_freeform_text": "Показати текстове поле довільної форми",
     "lbl_gallery": "Галерея",
     "lbl_general": "Загальний",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Значення анімації",
     "lbl_value_animation": "Час у мс",
     "lbl_value_changed": "Якщо значення змінило знак, заповніть інший бік (зворотний).",
+    "lbl_view": "Подання",
     "lbl_viewbox": "ViewBox",
     "lbl_width": "Ширина",
     "lbl_width_dot": "Ширина точки",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Відновіть підказки",
     "value_top": "Верх елемента",
     "value_top_left": "вгорі ліворуч",
-    "value_top_right": "вгорі праворуч"
+    "value_top_right": "вгорі праворуч",
+    "view_confirm_delete": "Видалити подання «%s» та його елементи?",
+    "view_create": "Нове подання",
+    "view_default": "Типове подання",
+    "view_manage": "Керування поданнями",
+    "view_name": "Назва подання",
+    "view_rename": "Перейменувати"
 }

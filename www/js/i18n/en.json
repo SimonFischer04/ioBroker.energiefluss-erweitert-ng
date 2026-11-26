@@ -239,6 +239,7 @@
     "lbl_frame_open": "Open URL in",
     "lbl_frame_options": "Browser Frame",
     "lbl_frame_url": "URL",
+    "lbl_frame_view": "Use a view as destination",
     "lbl_freeform_text": "Show freeform text field",
     "lbl_gallery": "Gallery",
     "lbl_general": "General",
@@ -332,6 +333,7 @@
     "lbl_valueAnimation": "Value animation",
     "lbl_value_animation": "Time in ms",
     "lbl_value_changed": "If the value has changed sign, fill the other direction (reverse)",
+    "lbl_view": "View",
     "lbl_viewbox": "ViewBox",
     "lbl_width": "Width",
     "lbl_width_dot": "Width of the dot",
@@ -586,5 +588,11 @@
     "value_toast_restore": "Restore the hints",
     "value_top": "Element top",
     "value_top_left": "top left",
-    "value_top_right": "top right"
+    "value_top_right": "top right",
+    "view_confirm_delete": "Delete the view “%s” and its elements?",
+    "view_create": "New view",
+    "view_default": "Default view",
+    "view_manage": "Manage views",
+    "view_name": "View name",
+    "view_rename": "Rename"
 }
